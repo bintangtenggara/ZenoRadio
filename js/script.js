@@ -245,12 +245,12 @@ function mute() {
 
 // Function to handle event wiring
 function connectToEventSource(url) {
-    // Criar uma nova instância de EventSource com a URL fornecida
+    // Create a new EventSource instance with the provided URL
     const eventSource = new EventSource(url);
 
     // Add a listener for the 'message' event
     eventSource.addEventListener('message', function(event) {
-        // Chamar a função para tratar os dados recebidos, passando a URL também
+        // Call the function to process the received data, passing the URL as well
         processData(event.data, url);
     });
 
@@ -318,8 +318,8 @@ function handleDeezerResponse(data, song) {
 
         coverBackground.style.backgroundImage = 'url(' + artworkUrl + ')';
     } else {
-        // Caso não haja dados ou a lista de dados esteja vazia,
-        // defina a capa padrão
+        // If there is no data or the data list is empty,
+        // set default cover
         var defaultArtworkUrl = 'https://warningfm.github.io/v3/img/fF8yUE0.png';
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
@@ -377,7 +377,7 @@ function getStreamingData(data) {
 
     var page = new Page();
 
-    // Formatar caracteres para UTF-8
+    // Format characters to UTF-8
     let song = jsonData.currentSong.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
     let artist = jsonData.currentArtist.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
 
