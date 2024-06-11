@@ -1,4 +1,4 @@
-const RADIO_NAME = 'Webradio';
+const RADIO_NAME = 'FM 95.6 MHz';
 
 // Change Stream URL Here, 
 const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
