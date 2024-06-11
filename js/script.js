@@ -320,7 +320,7 @@ function handleDeezerResponse(data, song) {
     } else {
         // Caso não haja dados ou a lista de dados esteja vazia,
         // defina a capa padrão
-        var defaultArtworkUrl = 'https://i.imgur.com/fF8yUE0.png';
+        var defaultArtworkUrl = 'https://warningfm.github.io/v3/img/fF8yUE0.png';
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
