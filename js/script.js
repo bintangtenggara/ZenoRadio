@@ -320,7 +320,7 @@ function handleDeezerResponse(data, song) {
     } else {
         // Caso não haja dados ou a lista de dados esteja vazia,
         // defina a capa padrão
-        var defaultArtworkUrl = 'img/cover.png';
+        var defaultArtworkUrl = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
