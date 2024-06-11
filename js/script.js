@@ -381,8 +381,8 @@ function getStreamingData(data) {
     let song = jsonData.currentSong.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
     let artist = jsonData.currentArtist.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
 
-    // Mudar o título
-    document.title = song + ' - ' + artist + ' | ' + RADIO_NAME;
+    // Change the title
+    document.title = artist + ' - ' + song + ' | ' + RADIO_NAME;
 
     page.refreshCover(song, artist);
     page.refreshCurrentSong(song, artist);
@@ -390,13 +390,13 @@ function getStreamingData(data) {
 
     if (showHistory) {
 
-        // Verificar se a música é diferente da última atualizada
+        // Check if the song is different from the last updated one
         if (musicHistory.length === 0 || (musicHistory[0].song !== song)) {
-            // Atualizar o histórico com a nova música
+            // Update history with new song
             updateMusicHistory(artist, song);
         }
 
-        // Atualizar a interface do histórico
+        // Update the history interface
         updateHistoryUI();
 
     }
@@ -411,20 +411,20 @@ function updateHistoryUI() {
     }
 }
 
-// Variável global para armazenar o histórico das duas últimas músicas
+// Global variable to store the history of the last two songs
 var musicHistory = [];
 
-// Função para atualizar o histórico das duas últimas músicas
+// Function to update the history of the last two songs
 function updateMusicHistory(artist, song) {
-    // Adicionar a nova música no início do histórico
+    // Add the new song to the beginning of the history
     musicHistory.unshift({ artist: artist, song: song });
 
-    // Manter apenas as duas últimas músicas no histórico
+    // Keep only the last two songs in history
     if (musicHistory.length > 4) {
-        musicHistory.pop(); // Remove a música mais antiga do histórico
+        musicHistory.pop(); // Remove the oldest song from the history
     }
 
-    // Chamar a função para exibir o histórico atualizado
+    // Call function to display updated history
     displayHistory();
 }
 
@@ -434,20 +434,20 @@ function displayHistory() {
     var $songName = document.querySelectorAll('#historicSong article .music-info .song');
     var $artistName = document.querySelectorAll('#historicSong article .music-info .artist');
 
-    // Exibir as duas últimas músicas no histórico, começando do índice 1 para excluir a música atual
+    // Display the last two songs in history, starting from index 1 to delete the current song
     for (var i = 1; i < musicHistory.length && i < 3; i++) {
         $songName[i - 1].innerHTML = musicHistory[i].song;
         $artistName[i - 1].innerHTML = musicHistory[i].artist;
 
-        // Chamar a função para buscar a capa da música na API do Deezer
+        // Call the function to search for the song cover in the Deezer API
         refreshCoverForHistory(musicHistory[i].song, musicHistory[i].artist, i - 1);
 
-        // Adicionar classe para animação
+        // Add class for animation
         $historicDiv[i - 1].classList.add('animated');
         $historicDiv[i - 1].classList.add('slideInRight');
     }
 
-    // Remover classes de animação após 2 segundos
+    // Remove animation classes after 2 seconds
     setTimeout(function () {
         for (var j = 0; j < 2; j++) {
             $historicDiv[j].classList.remove('animated');
