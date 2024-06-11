@@ -311,7 +311,7 @@ function handleDeezerResponse(data, song) {
         // Search Cover by Artist name
         // var artworkUrl = data.data[0].artist.picture_big;
         // Search Cover by song name
-        var artworkUrl = data.data[0].album.cover_big;
+        var artworkUrl = data.data[0].album.cover_xl;
 
         coverArt.style.backgroundImage = 'url(' + artworkUrl + ')';
         coverArt.className = 'animated bounceInLeft';
