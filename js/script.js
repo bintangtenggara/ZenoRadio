@@ -14,7 +14,7 @@ const url = 'https://api.zeno.fm/mounts/metadata/subscribe/r4mpcrfwfzzuv';
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
 
-const DEFAULT_COVER_ART = 'https://warningfm.github.io/v3/img/oXLS6e6.png';
+const DEFAULT_COVER_ART = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
 
 // Variable to control history display: true = display / false = hides
 let showHistory = true; 
