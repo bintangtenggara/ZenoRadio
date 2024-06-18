@@ -13,14 +13,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Bintang Tenggara FM" />
 <meta property="og:description" content="Listen live to Bintang Tenggara FM" />
-<meta property="og:url" content="https://players.rcast.net/sombras/62831" />
+<meta property="og:url" content="https://bintangtenggarafm.com/rcast" />
 <meta property="og:site_name" content="Bintang Tenggara FM" />
 <meta property="og:image" content="https://warningfm.github.io/v3/img/fF8yUE0.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description" content="Listen live to Bintang Tenggara FM" />
 <meta name="twitter:title" content="Listen live to Bintang Tenggara FM" />
 <meta name="twitter:site" content="@Rbt956" />
-<meta name="twitter:url" value="https://players.rcast.net/sombras/62831" />
+<meta name="twitter:url" value="https://bintangtenggarafm.com/rcast" />
 <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrj6RrdKvSOsJ70t0DzjZnowKNIdRdDTjOmIBmmJKeToPvv12n3rEUhCQwgWDn9HCXhGheu940MLFKQYhgGIUGQih2bCa9Z4Cz745FU1dkaTZdk0zdOIvn2qJXx-v2FgyGDotLH9CvczASYzXYHLsexVsXw4MDjDHP1zUNhH-X9Axv6sI9-a03LYTU9DZb/s1600/oXjwIYm.png" />
 <meta name="twitter:creator" content="@Rbt956" />
 
@@ -31,13 +31,15 @@
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.bintangtenggarafm.com/img/favicon.png">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://warningfm.github.io/v3/css/animate.css">
 <link id="maintheme" href="https://warningfm.github.io/v3/css/combro.css" rel="stylesheet" type="text/css">
+
 <style>
 .cover-site {
 	min-width: 100%;
 	min-height: 100%;
 	position: fixed;
-	background: url('https://warningfm.github.io/v3/img/wO8J9xT.jpg') no-repeat;
+	background: url('https://warningfm.github.io/v3/img/B0PYHAq.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 	transition: background-image 1s;
@@ -47,24 +49,25 @@
 .cover-album {
 	max-width: 80%;
 	margin: auto;
-	background: url('https://warningfm.github.io/v3/img/wO8J9xT.jpg') no-repeat;
+	background: url('https://warningfm.github.io/v3/img/K5bz9yt.jpg') no-repeat;
 	background-size: cover;
-	border: 1px solid #383838;
+	border: 2px solid #383838;
 	box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
 	transition: background-image 1s;
 	margin-bottom: 15px;
 }
 .watermark {
     width: 89px;
-    height: 55px;
-    background: url(https://warningfm.github.io/v3/img/9b0Y5ki.png) no-repeat;
-    background-size: auto 55px;
+    height: 35px;
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj7DkK0S8weL5arnSdQT8_JL7wEqayAd6UCgKe3Bll60laE32qxXCDX_85kRoatV2VMwEs0-gs5W8AKCeCDnrCrD4BKwxmY0f7bw6lFTsaCFrTModZLQiLRtxHe9H-qlL6Yx_u0q96lxkVBIzhS54KgCNOly5hwpC8ohyphenhyphen1_jRvFF1B7zHLOfT66kIDWEtT/s1600/rbtfm_logo.png) no-repeat;
+    background-size: auto 35px;
     opacity: 0.5;
     position: relative;
-    bottom: 56px;
+    bottom: 37px;
     right: -1px;
     z-index: 5;
 }
+
 .info-current-song h2 {
     color: rgba(255,255,255,1)!important;
 }
@@ -72,7 +75,7 @@
     color: rgba(255,255,255,1)!important;
 }
 .play-pause i {
-    color: rgba(255,16,46,1)!important;
+    color: rgba(221,81,16,1)!important;
 }
 
 .bg-mask {
@@ -81,7 +84,20 @@
     position: absolute;
     background: radial-gradient(rgba(0, 0, 0, .5) 20%, #000 85%);
     z-index: 2;
-}
+} 
+
+.historic .cover-historic {
+    width: 95px;
+    height: 95px;
+    margin-right: 15px;
+    float: left;
+    background: url('https://warningfm.github.io/v3/img/K5bz9yt.jpg') no-repeat;
+    background-size: cover; 
+    
+    border: 2px solid #fefefe;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-image 1s;
+} 
 </style>
 
 <style>
@@ -100,87 +116,83 @@
         }
         }
     </style>
-
-
 </head>
-<body style="background-color:rgba(33,33,33,1);color:rgba(255,255,255,1);margin: 0;">
-<div class="cover-site">
-<div id="bgCover"></div>
-<div class="bg-mask"></div>
-</div>
-<main>
-<section id="player">
-<div class="container">
-<div class="row web-player">
-<div class="col-12 col-lg-10">
-<div class="row">
-<div class="col-12 col-md-5">
-<div class="cover-album" style="height: 320px;">
-<a href target="_blank" id="afflink">
-<div id="currentCoverArt"></div>
-<div class="watermark"></div>
-</a>
-</div>
-</div>
-<div class="col-12 ml-md-auto col-md-6">
-<div class="row">
-<div class="col-12">
-<div class="info-current-song">
-<h3 id="currentArtist" class="text-capitalize">...</h3>
-<h2 id="currentSong" class="text-uppercase">...</h2>
-</div>
-</div>
-<div class="col-12">
-<div class="row">
-<div class="play-pause col-12 col-md-2 text-center"> 
-<i id="playerButton" class="fa fa-play" onclick="togglePlay()"></i>
-</div>
-<div class="col-12 col-md-10 text-center">
-<div class="row volume-control">
-<div class="volume-icon col-1"><i class="fa fa-volume-up"></i>
-</div>
-<div class="volume-slide col-10 text-center">
-<input type="range" id="volume" step="1" min="0" max="100" value="99">
-</div>
-<div class="percentual-volume col-12">Volume <span id="volIndicator">99</span>%</div>
-</div>
-</div>
-</div>
-<div class="col-12 text-center call-lyrics">
-<a href="#" class="lyrics" style="" data-target="#modalLyrics">Lyrics</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row historic">
-<div class="col-12">
-<h2> <a href="javascript:void(0);" id="triggerToggle" class="text-white"><i class="fa fa-bars"></i> Mari Diputer</a></h2>
-<p> </p>
-<div class="row" id="historicSong" style="display:flex">
-<article class="col-12 col-md-6">
-<div class="cover-historic"></div>
-<div class="music-info">
-<div class="artist">...</div>
-<div class="song">...</div>
-</div>
-</article>
-<article class="col-12 col-md-6">
-<div class="cover-historic"></div>
-<div class="music-info">
-<div class="artist">...</div>
-<div class="song">...</div>
-</div>
-</article>
-</div>
-</div>
-</div>
-</section>
-</main>
-<div class="modal fade" id="modalLyrics" tabindex="-1" role="dialog" aria-labelledby="lyricsSong" aria-hidden="true">
+
+<body>
+    <div class="cover-site">
+        <div id="bgCover"></div>
+        <div class="bg-mask"></div>
+    </div>
+    <main>
+        <section id="player">
+            <div class="container">
+                <div class="row web-player">
+                    <div class="col-12 col-lg-10">
+                        <div class="row">
+                            <div class="col-12 col-md-5">
+                                <div class="cover-album" style="height: 320px;"> 
+                                    <a href target="_blank" id="afflink">
+                                    <div id="currentCoverArt"></div>
+                                    <div class="watermark"></div> 
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 ml-md-auto col-md-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="info-current-song">
+                                            <h3 id="currentArtist" class="current-artist text-captalize">No Artist</h3>
+                                            <h2 id="currentSong" class="current-song text-Letter case">No Title</h2>
+                                          </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="play-pause col-12 col-md-2 text-center">
+                                                <i id="playerButton" class="fa fa-play" onclick="togglePlay()"></i>
+                                            </div>
+                                            <div class="col-12 col-md-10 text-center">
+                                                <div class="row volume-control">
+                                                    <div class="volume-icon col-1"><i class="fa fa-volume-up"></i></div>
+                                                    <div class="volume-slide col-10 text-center"><input type="range" id="volume"
+                                                            step="1" min="0" max="100" value="99"></div>
+                                                    <div class="percentual-volume col-12">Volume <span id="volIndicator">...</span>%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-center call-lyrics">
+                                                <a href="#" class="lyrics" style="" data-target="#modalLyrics">Lyrics</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row historic">
+                    <div class="col-12">
+                        <h2>Mari Diputer :</h2>
+                        <div class="row" id="historicSong">
+                            <article class="col-12 col-md-6">
+                                <div class="cover-historic"></div>
+                                <div class="music-info">
+                                    <div class="artist">No Artist</div>
+                                    <div class="song">No Title</div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-md-6">
+                                <div class="cover-historic"></div>
+                                <div class="music-info">
+                                    <div class="artist">No Artist</div>
+                                    <div class="song">No Title</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </main>
+    <div class="modal fade" id="modalLyrics" tabindex="-1" role="dialog" aria-labelledby="lyricsSong" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -197,10 +209,10 @@
             </div>
         </div>
     </div>
-<script type="text/javascript" src="https://warningfm.github.io/v3/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="js/script.js"></script>
-<small style="bottom: 8px;font-size: 8px;position: fixed;right: 8px;text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);z-index: 1004;"><b><a style="color:#fff;text-decoration: none;" target="_blank" href="https://mbahnunungonline.net/live" title="Internet Radio Streaming">NNG.NET</a></b></small>
+    <script type="text/javascript" src="https://warningfm.github.io/v3/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <small style="bottom: 8px;font-size: 8px;position: fixed;right: 8px;text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);z-index: 1004;"><b><a style="color:#fff;text-decoration: none;" target="_blank" href="https://mbahnunungonline.net/live" title="Internet Radio Streaming">NNG.NET</a></b></small>
 </body>
 </html>
