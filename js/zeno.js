@@ -69,7 +69,7 @@ class Page {
         // Function to update the cover
         this.refreshCover = function (song = '', artist) {
             // Default cover art
-            var urlCoverArt = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
+            var urlCoverArt = 'img/cover.png';
 
             // Creation of the script tag to make the JSONP request to the Deezer API
             const script = document.createElement('script');
