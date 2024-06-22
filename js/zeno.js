@@ -327,7 +327,21 @@ function handleDeezerResponse(data, song) {
     } else {
         // If there is no data or the data list is empty,
         // set the Default cover art
-        var defaultArtworkUrl = DEFAULT_COVER_ART;
+        //var defaultArtworkUrl = DEFAULT_COVER_ART;
+        // Artist Covers - Below 
+        const Commercial_Break = 'https://live.staticflickr.com/65535/53805955404_bc1c26a8c8_z.jpg';
+        const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
+        const TS = 'https://live.staticflickr.com/65535/53806077625_4cd26b7cf5_z.jpg';
+        const BintangTenggara = 'https://images2.imgbox.com/be/cd/J6Gcj7sv_o.jpg'; 
+        
+        if (artist == 'FRATELLO') {var urlCoverArt = FRATELLO;}
+            else if (artist == 'Commercial Break') {var defaultArtworkUrl = Commercial_Break;}
+            else if (artist == 'JINGLE SETELAH IKLAN') {var defaultArtworkUrl = JINGLESETELAHIKLAN;}
+            else if (artist == 'TS') {var defaultArtworkUrl = TS;}
+            else if (artist == 'Bintang Tenggara') {var defaultArtworkUrl = BintangTenggara;}
+     
+        // Default cover art
+        else {var defaultArtworkUrl = DEFAULT_COVER_ART;}
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
