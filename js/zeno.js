@@ -1,5 +1,8 @@
 const RADIO_NAME = 'Bintang Tenggara';
 
+// DEFAULT COVER
+const DEFAULT_COVER_ART = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
+
 // Change Stream URL Here, 
 const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
 
@@ -315,7 +318,7 @@ function handleDeezerResponse(data, song) {
     } else {
         // If there is no data or the data list is empty,
         // set the Default cover art
-        var defaultArtworkUrl = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
+        var defaultArtworkUrl = DEFAULT_COVER_ART;
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
