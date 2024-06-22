@@ -78,14 +78,14 @@ class Page {
             }
         };
 
-        
-
+        // Function to update the cover
+        this.refreshCover = function (song = '', artist) {
+            
             // Creation of the script tag to make the JSONP request to the Deezer API
             const script = document.createElement('script');
             script.src = `https://api.deezer.com/search?q=${artist} ${song}&output=jsonp&callback=handleDeezerResponse`;
             document.body.appendChild(script);
         };
-
 
         this.changeVolumeIndicator = function (volume) {
             document.getElementById('volIndicator').innerHTML = volume;
@@ -439,7 +439,10 @@ function updateMusicHistory(artist, song) {
 function displayHistory() {
     var $historicDiv = document.querySelectorAll('#historicSong article');
     var $songName = document.querySelectorAll('#historicSong article .music-info .song');
-    var $artistName = document.querySelectorAll('#historicSong article .music-info .artist');
+    var $artistName = document.querySelectorAll('#historicSong article .music-info .artist'); 
+
+    // Default cover art
+    var urlCoverArt = 'img/cover.png';
 
     // Display the last two songs in history, starting from index 1 to delete the current song
     for (var i = 1; i < musicHistory.length && i < 3; i++) {
