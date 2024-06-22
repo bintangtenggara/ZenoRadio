@@ -335,10 +335,10 @@ function handleDeezerResponse(data, song) {
         const BintangTenggara = 'https://images2.imgbox.com/be/cd/J6Gcj7sv_o.jpg'; 
         
         if (artist == 'FRATELLO') {var urlCoverArt = FRATELLO;}
-            else if (artist == 'Commercial Break') {var defaultArtworkUrl = Commercial_Break;}
-            else if (artist == 'JINGLE SETELAH IKLAN') {var defaultArtworkUrl = JINGLESETELAHIKLAN;}
-            else if (artist == 'TS') {var defaultArtworkUrl = TS;}
-            else if (artist == 'Bintang Tenggara') {var defaultArtworkUrl = BintangTenggara;}
+            else if (artist == 'Commercial Break') {var artworkUrl = Commercial_Break;}
+            else if (artist == 'JINGLE SETELAH IKLAN') {var artworkUrl = JINGLESETELAHIKLAN;}
+            else if (artist == 'TS') {var artworkUrl = TS;}
+            else if (artist == 'Bintang Tenggara') {var artworkUrl = BintangTenggara;}
      
         // Default cover art
         else {var defaultArtworkUrl = DEFAULT_COVER_ART;}
