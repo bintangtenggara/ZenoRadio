@@ -1,7 +1,7 @@
 const RADIO_NAME = 'Bintang Tenggara';
 
 // DEFAULT COVER
-const DEFAULT_COVER_ART = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
+const DEFAULT_COVER_ART = 'img/f69c7be1aa497aaa87f40d2306c4b3577.png';
 
 // Change Stream URL Here, 
 const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
