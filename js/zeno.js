@@ -306,15 +306,15 @@ function handleDeezerResponse(data, song) {
         // Search Cover by Artist name
         // var artworkUrl = data.data[0].artist.picture_big;
         // Search Cover by song name
-        var artworkUrl = data.data[0].album.cover_big;
+        var artworkUrl = data.data[0].album.cover_xl;
 
         coverArt.style.backgroundImage = 'url(' + artworkUrl + ')';
         coverArt.className = 'animated bounceInLeft';
 
         coverBackground.style.backgroundImage = 'url(' + artworkUrl + ')';
     } else {
-        // Caso nÃ£o haja dados ou a lista de dados esteja vazia,
-        // defina a capa padrÃ£o
+        // If there is no data or the data list is empty,
+        // set the Default cover art
         var defaultArtworkUrl = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
