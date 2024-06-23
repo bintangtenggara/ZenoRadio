@@ -26,7 +26,7 @@ const url = 'https://api.zeno.fm/mounts/metadata/subscribe/r4mpcrfwfzzuv';
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
 
-const DEFAULT_COVER_ART = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
+const DEFAULT_COVER_ART = 'https://live.staticflickr.com/65535/53809685413_aa4635886b_b.jpg';
 
 // Variable to control history display: true = display / false = hides
 let showHistory = false; 
