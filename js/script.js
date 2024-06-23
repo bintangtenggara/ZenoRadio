@@ -44,7 +44,7 @@ window.onload = function () {
     // Interval to get streaming data in miliseconds
     setInterval(function () {
         getStreamingData();
-    }, 4000);
+    }, 5000);
 
     var coverArt = document.getElementsByClassName('cover-album')[0];
 
