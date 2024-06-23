@@ -87,7 +87,7 @@ function Page() {
         const TS = 'https://live.staticflickr.com/65535/53806077625_4cd26b7cf5_z.jpg';
         const BintangTenggara = 'https://warningfm.github.io/v3/img/oXLS6e6.png';
         const Dengarkami = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlls9ueREHov52cYP-e_IdSZQUkEoem-OvCVKRNUFrJCpYyUKJGu_N9MZDJn9e3Z-HfsiNht3hZMo2wcrUAjAp4xDM7vrzcThpB-dSXEENtAbCGjPyahpmgumJYmvLIfgFl_rOd7E4h6S2DeUdRk4GAgsG5eUY6zqKQ6_87g03kwxkISbbfkNWFEeA8zMn/s1600/4xVgaxB.jpeg';
-        const JINGLE = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhT6S0HYMCOYSU_8asRRLk9yAQrdRS12UB9AlLJV27WbbyZ6MpHI5DC0DSlIxpQT7n7iC9X-5-QmFQyvdMW4vcU12NlHpQ7dmjOULO6TvhlV4VglbI-acjlDFKnUU268L5R-a65pzIbd1G0qRodZiJKsEw9B2Ga4BzGc3BzJx8l8xOtGLIIyWMkdEaUbgJY/s1600/Dlzeilaz.jpg';
+        const JINGLE = 'https://live.staticflickr.com/65535/53809988652_4b13186277_z.jpg';
         const TANDAWAKTUSHOLATDHUHUR = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2F9RU0k7w_EWKjhsDP-YJAfCnFxFzW21G8mqmiSDSf-J5ocGv4yOjb5nuGFhlJW9iBAPWgjEn4jhr-bt-CK84RGFtJf6JneNMZgpbYV1Mi-mwbr7rzeu77mm-MqL7rbk_8O5sduTnGPdMj000VGVCbGc_gR1IgAr6-FrDcXpg-vun-lebVxtLEnuGAwUz/s1600/m2iqnIm.jpg';
         const ASHAR = 'https://live.staticflickr.com/65535/53808429057_45e11e4986_z.jpg';
         const ADZANMAGHRIB = 'https://i.scdn.co/image/ab67616d0000b273f9fc89132411c52d8c6bc537';
