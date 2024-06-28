@@ -13,7 +13,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 const RADIO_NAME = 'Bintang Tenggara';
 
 // Change DEFAULT COVER
-const DEFAULT_COVER_ART = 'img/f69c7be1aa497aaa87f40d2306c4b3577.png';
+const DEFAULT_COVER_ART = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
 
 // Change Zeno Stream URL Here
 const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
