@@ -12,10 +12,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 const RADIO_NAME = 'Bintang Tenggara';
 
-// DEFAULT COVER
+// Change DEFAULT COVER
 const DEFAULT_COVER_ART = 'img/f69c7be1aa497aaa87f40d2306c4b3577.png';
 
-// Change Stream URL Here, 
+// Change Zeno Stream URL Here
 const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
 
 // Change API URL Here
@@ -25,7 +25,7 @@ const url = 'https://api.zeno.fm/mounts/metadata/subscribe/r4mpcrfwfzzuv';
 const API_KEY = "18fe07917957c289983464588aabddfb";
 
 // Variable to control history display: true = display / false = hides
-let showHistory = false; 
+let showHistory = true; 
 
 window.onload = function () {
     var page = new Page;
