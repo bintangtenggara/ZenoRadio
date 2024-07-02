@@ -385,11 +385,11 @@ function getStreamingData(data) {
 
     var page = new Page();
 
-    // Formatar caracteres para UTF-8
+    // Format characters to UTF-8
     let song = jsonData.currentSong.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
     let artist = jsonData.currentArtist.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
 
-    // Mudar o tÃ­tulo
+    // Change the title
     document.title = artist + ' - ' + song + ' | ' + RADIO_NAME;
 
     page.refreshCover(song, artist);
@@ -398,13 +398,13 @@ function getStreamingData(data) {
 
     if (showHistory) {
 
-        // Verificar se a mÃºsica Ã© diferente da Ãºltima atualizada
+        // Check if the song is different from the last updated one
         if (musicHistory.length === 0 || (musicHistory[0].song !== song)) {
-            // Atualizar o histÃ³rico com a nova mÃºsica
+            // Update history with new song
             updateMusicHistory(artist, song);
         }
 
-        // Atualizar a interface do histÃ³rico
+        // Update the history interface
         updateHistoryUI();
 
     }
@@ -453,7 +453,7 @@ function displayHistory() {
         // Call the function to search for the song cover in the Deezer API
         refreshCoverForHistory(musicHistory[i].song, musicHistory[i].artist, i - 1);
 
-        // Adicionar classe para animaÃ§Ã£o
+        // Add class for animation
         $historicDiv[i - 1].classList.add('animated');
         $historicDiv[i - 1].classList.add('slideInRight');
     }
@@ -487,7 +487,6 @@ function refreshCoverForHistory(song, artist, index) {
         }
     };
 }
-
 
 document.addEventListener('keydown', function (event) {
     var key = event.key;
