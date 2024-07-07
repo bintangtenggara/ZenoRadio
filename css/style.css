@@ -60,7 +60,7 @@ body {
     margin: auto;
     background: url('https://live.staticflickr.com/65535/53815134475_ab557c3fdd_z.jpg') no-repeat;
     background-size: cover;
-    border: 1px solid #ff0000;
+    border: 1px solid #ef7f1a;
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
     transition: background-image 1s;
     border-radius: 10px;
@@ -273,7 +273,7 @@ input[type=range]::-ms-thumb {
 
 .historic h2 {
     color: #0090ff;
-    border-bottom: 2px solid #fefefe;
+    border-bottom: 2px solid #ef7f1a;
     font-size: 18px;
     font-weight: bold;
     text-transform: Letter case;
@@ -299,7 +299,7 @@ input[type=range]::-ms-thumb {
     border-radius: 10px;
     background: url('https://live.staticflickr.com/65535/53815134475_ab557c3fdd_z.jpg') no-repeat;
     background-size: cover;
-    border: 1px solid #ff0000;
+    border: 1px solid #ef7f1a;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-image 1s;
 }
