@@ -34,56 +34,55 @@ const DEFAULT_COVER_ART = 'https://live.staticflickr.com/65535/53809685413_aa463
 let showHistory = true; 
 
 window.onload = function () {
-    var page = new Page;
-    page.changeTitlePage();
-    page.setVolume();
+  var page = new Page;
+  page.changeTitlePage();
+  page.setVolume();
 
-    var player = new Player();
-    player.play();
+  var player = new Player();
+  player.play();
 
+  getStreamingData();
+  // Interval to get streaming data in miliseconds
+  setInterval(function () {
     getStreamingData();
-    // Interval to get streaming data in miliseconds
-    setInterval(function () {
-        getStreamingData();
-    }, 5000);
+  }, 4000);
 
-    var coverArt = document.getElementsByClassName('cover-album')[0];
+  var coverArt = document.getElementsByClassName('cover-album')[0];
 
-    coverArt.style.height = coverArt.offsetWidth + 'px';
+  coverArt.style.height = coverArt.offsetWidth + 'px';
 }
 
 // DOM control
 function Page() {
-    this.changeTitlePage = function (title = RADIO_NAME) {
-        document.title = title;
-    };
+  this.changeTitlePage = function (title = RADIO_NAME) {
+    document.title = title;
+  };
 
-    this.refreshCurrentSong = function (song, artist) {
-        var currentSong = document.getElementById('currentSong');
-        var currentArtist = document.getElementById('currentArtist');
+  this.refreshCurrentSong = function (song, artist) {
+    var currentSong = document.getElementById('currentSong');
+    var currentArtist = document.getElementById('currentArtist');
 
-        if (song !== currentSong.innerHTML) {
-            // Animate transition
-            currentSong.className = 'animated flipInY text-uppercase';
-            currentSong.innerHTML = song;
+    if (song !== currentSong.innerHTML) {
+      // Animate transition
+      currentSong.className = 'animated flipInY text-uppercase';
+      currentSong.innerHTML = song;
 
-            currentArtist.className = 'animated flipInY text-capitalize';
-            currentArtist.innerHTML = artist;
+      currentArtist.className = 'animated flipInY text-capitalize';
+      currentArtist.innerHTML = artist;
 
-            // Refresh modal title
-            document.getElementById('lyricsSong').innerHTML = song + ' - ' + artist;
+      // Refresh modal title
+      document.getElementById('lyricsSong').innerHTML = song + ' - ' + artist;
 
-            // Remove animation classes
-            setTimeout(function () {
-                currentSong.className = 'text-uppercase';
-                currentArtist.className = 'text-capitalize';
-            }, 2000);
-        }
+      // Remove animation classes
+      setTimeout(function () {
+        currentSong.className = 'text-uppercase';
+        currentArtist.className = 'text-capitalize';
+      }, 2000);
     }
-    
-    this.refreshCover = function (song = '', artist) {
+  }
+  this.refreshCover = function (song = '', artist) {
         const Commercial_Break = "https://live.staticflickr.com/65535/53805955404_bc1c26a8c8_z.jpg";
-        const Bintang_Tenggara = 'https://cdn.bintangtenggarafm.com/img/rbt-cover.png';
+        const Bintang_Tenggara = 'https://thumbs2.imgbox.com/d3/8c/gZlJT3OQ_t.png';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
         const TS = 'https://live.staticflickr.com/65535/53806077625_4cd26b7cf5_z.jpg';
         const Dengarkami = 'https://live.staticflickr.com/65535/53813054961_c1727b86fd.jpg';
@@ -178,8 +177,6 @@ function Page() {
             else if (artist == 'Second Civil') {var urlCoverArt = Second_Civil;}
             else if (artist == 'Ismi Azis') {var urlCoverArt = Ismi_Azis;}
             else if (artist == 'IKLAN') {var urlCoverArt = IKLAN;}
-        
-        // Default cover art
         else {var urlCoverArt = DEFAULT_COVER_ART;}
 
         var xhttp = new XMLHttpRequest();
@@ -251,7 +248,6 @@ function Page() {
         xhttp.open('GET', 'https://itunes.apple.com/search?term=' + artist + ' ' + song + '&media=music&limit=1', true);
         xhttp.send();
     }
-
     this.changeVolumeIndicator = function (volume) {
         document.getElementById('volIndicator').innerHTML = volume;
 
