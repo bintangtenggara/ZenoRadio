@@ -29,7 +29,7 @@ const API_KEY = "18fe07917957c289983464588aabddfb";
 const DEFAULT_COVER_ART = 'https://live.staticflickr.com/65535/53809685413_aa4635886b_b.jpg';
 
 // Variable to control history display: true = display / false = hides
-let showHistory = false; 
+let showHistory = true; 
 
 
 window.onload = function () {
@@ -82,25 +82,25 @@ function Page() {
     
     this.refreshCover = function (song = '', artist) {
         // Default cover art
-        const Commercial_Break = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNlQzYXN6mMuI8UeFfcnVcUIjlmK3EiZLaSP2meD4juWjw_EnhNU6UWDe6At5SfIbJH1Y05Aw_szYgC-dC1j34NsXfwJbutuwD9fMiDBFQdD-Dgqt0y8-Y4tZYPbYrGpRMfRiJPdNrns13ZJQWrOjwL6w-sSw-RNL5jzuzyzUVlB1eV0KtK0LArE6zQZUE/s1600/commercialbreak.jpg';
+        const Commercial_Break = "https://live.staticflickr.com/65535/53805955404_bc1c26a8c8_z.jpg";
+        const Bintang_Tenggara = 'https://cdn.bintangtenggarafm.com/img/rbt-cover.png';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
         const TS = 'https://live.staticflickr.com/65535/53806077625_4cd26b7cf5_z.jpg';
-        const BintangTenggara = 'https://warningfm.github.io/v3/img/oXLS6e6.png';
-        const Dengarkami = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlls9ueREHov52cYP-e_IdSZQUkEoem-OvCVKRNUFrJCpYyUKJGu_N9MZDJn9e3Z-HfsiNht3hZMo2wcrUAjAp4xDM7vrzcThpB-dSXEENtAbCGjPyahpmgumJYmvLIfgFl_rOd7E4h6S2DeUdRk4GAgsG5eUY6zqKQ6_87g03kwxkISbbfkNWFEeA8zMn/s1600/4xVgaxB.jpeg';
-        const JINGLE = 'https://live.staticflickr.com/65535/53809988652_4b13186277_z.jpg';
-        const TANDAWAKTUSHOLATDHUHUR = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2F9RU0k7w_EWKjhsDP-YJAfCnFxFzW21G8mqmiSDSf-J5ocGv4yOjb5nuGFhlJW9iBAPWgjEn4jhr-bt-CK84RGFtJf6JneNMZgpbYV1Mi-mwbr7rzeu77mm-MqL7rbk_8O5sduTnGPdMj000VGVCbGc_gR1IgAr6-FrDcXpg-vun-lebVxtLEnuGAwUz/s1600/m2iqnIm.jpg';
+        const Dengarkami = 'https://live.staticflickr.com/65535/53813054961_c1727b86fd.jpg';
+        const jingle = 'https://live.staticflickr.com/65535/53809988652_4b13186277_z.jpg';
+        const TANDAWAKTUSHOLATDHUHUR = 'https://live.staticflickr.com/65535/53815587960_2ded7e8990_z.jpg';
         const ASHAR = 'https://live.staticflickr.com/65535/53808429057_45e11e4986_z.jpg';
-        const ADZANMAGHRIB = 'https://i.scdn.co/image/ab67616d0000b273f9fc89132411c52d8c6bc537';
-        const OpeningRadio = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirhlnLe1cXHdeIMNZ0q1yefm-AYwhuUwE5vbU8vVw3zf80cYPBS-9SBtwO2zUmRlniZLCT2zsRRVyFq5UANxWC94PAUJ9tIAYfKrXDHYHls-hWpf5NzM0PEEC1honYHAbqXiEiskhjlc2Yd0VdjAf-yIAZnI_vCwMYPGZ8isbCbRPhhph4zoB2GE6bZAjO/s1600/opeNing.jpg';
-        const LAGUPENUTUPRADIO = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNEamewgAbyAZFYi_B0GkmXat8Z1aglWgubnf10D8etRJu2ZtJEt_fuk8EVhCVEolKvUl7Lqo8TQZmCilmGcCssvzzKn8LDg9e-mrvdbrRrzq3KSFx3e_4hN5jizPhyFBuFCmqvogZS99aGrfi6GrQMBd0l59bWk1THfsXR1-44zhIPuSMQV64kylXQ-YZ/s1600/penutupan.jpg';
+        const ADZANMAGHRIB = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNqNb72rVTrjbv4OaLt1qAFkjySlaFJp34YyC_XJ6RNtoBXq_bYSp8cmubhyphenhyphenKBUxxytuneVwHHCSMmomBwSYN4LdmH6QXTV1e5YIkjTS0677w_lnuMqX3isz5WIhFO_6pAHJriBkQyevuv5AgH1_hpsoQYsliB_5KsyFzXi2STQ9GGKWIB9l5IiAg8_uuc/s1600/sXTgm2j.jpg';
+        const OpeningRadio = 'https://cdn.bintangtenggarafm.com/img/oJTOhsL.jpg';
+        const LAGUPENUTUPRADIO = 'https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/ec/3f/64/ec3f643b-0ffd-eb61-9ccf-c8d2c027594f/3ad3589a-548e-4b13-970c-83a2937c7d5c.jpg/1200x1200bb.jpg';
         const Citizen = 'https://thumbs2.imgbox.com/b1/29/LxXCnvNr_t.jpg';
-        const JELAJAHDESA = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju93kG2MbF4wulmf2HqIsNtbLeAh57ldbuKD6gRRM-DzUl-so8as-uaaUJzO_YaHWuVo7cLro1Ihp5LuyTsppRk_7Al2T7Om5CSUqiLlhkSYdL0QDajPjeIfW7jrPKzGe6D4_TKsj6BDoRYDlSYOAmIlcduoM3lQQFU4oThuM671dzfstZqQRH0G5K6QD2/s1600/Jelajahdesa.jpg';
+        const JELAJAHDESA = 'https://thumbs2.imgbox.com/7e/dc/vOGdajpd_t.jpg';
         const WISATABUDAYA = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj76_ShbSLBp_jr_Og-mX5b-010-7qIIEPM3ZZeN84zyldmyMX2NS-yLfMPZLa46N7tBFwX8EKlwbUe-9wqU6U_0FO2jV54YFdV0AEvhW0r8jAa5YAE-5TCHgS-uB2HUVHHj0MN9P8xhg5jHAFY-3tMvD_u1BvHdUScYgev4ZcBSCrepzs_75lcKn4dAOdN/s1600/G8Qnr1y.jpg';
         const SHOLAWAT = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIpqY48J4bs8uxDW02DXU_87iAkbYboTn0pxJQ5p0wyoQKt4YYr7BnqczK2UhAcbHkeUyM2m-5IHhUD_jTvWts-7HPMgRU1s4ZJsstS-Kq74NNqHRgsdxkrUoEGhttVFPkCjjR_O766XT_r1WaC2kcUgwkAP9zWSXLzvocqlz-0Y8NU3ViCiC-T9Jfb5bz/s1600/Wf3SDEt.png';
         const RadioBintangTenggara = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLSPAs-qRbddzeii-poy3k5Tsz26fYDw8AFeK04iNOxM1HCD6zMOmi5i9bhK6FBGDree32YzCUhiThpyFYr5Cd9A4yiHlOH9MnYPlH3psMW_zzRL0I6yCuMuAA1RvFfGSJEsY0UY3kQjG8xUDSarEVEWBdFS046suoDe25Ar0K8izBvMwrJIZl-aJ_U_1I/s1600/fF8yUE0.png';
         const AlffyRev  = 'https://i.scdn.co/image/ab67616d0000b273d0572746e75788f3a073899b';
-        const Ajeng = 'https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e5/47/cf/e547cfe3-f707-7175-9123-b640435f6a8c/cover.jpg/1200x1200bb.jpg';
-        const Agnes_Monica = 'https://i.scdn.co/image/ab6761610000e5eb09160e5ffdc256e65713a8a9';
+        const Ajeng = 'https://i.scdn.co/image/ab67616d00001e02f82c2fa93ef91d7cc86be1d2';
+        const Agnes_Monica = 'https://e-cdns-images.dzcdn.net/images/cover/ff26191927ceb7ae9e0e6f6c0af570b8/500x500-000000-80-0-0.jpg';
         const INNA_Ft_Yandel = 'https://i1.sndcdn.com/artworks-000060831547-7emuqa-t500x500.jpg';
         const SOLUSI_SEHAT = 'https://images2.imgbox.com/f8/ca/GwuLQxLZ_o.jpg';
         const Ari_Lasso = 'https://i.scdn.co/image/ab6761610000e5eb4e1ed336c3ff93a95fa44e14';
@@ -114,69 +114,73 @@ function Page() {
         const Kirana_Setio = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/9c/43/2e/9c432e8e-15ec-e94f-35f3-8322ca48bab3/artwork.jpg/1200x1200bf-60.jpg';
         const Fadly_Ft_Natasha = 'https://i.scdn.co/image/ab67616d0000b2737022d4a537820482e1034044';
         const Alma_Esbeye = 'https://i.scdn.co/image/ab67616d0000b2739e7d30df02b301c12516ca65'; 
-        const TAHUKAH_ANDA = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlgtNm-H7v4NN3ibwE-_yLPhMVdetUfOUYL9x8YYs4QQRpzvo0emUq1OuaR-LMMAoNKeqJxHK4TFavoPS8GfxZyJdOpdnf0RPn5UlQ4kURFbcdMRr7sB37xM-Qb0QxzmDq65Eh9FkQHEM6US2Y8lOxZgIV_pyBdO3MTcIRDkal6xquL1Hi6-XwodtxAAOb/s1600/taukahAnda.jpg'; 
+        const TAHUKAH_ANDA = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxAJ1sodtny4phVNn5gBDdaT9a_vgRaMfqSwZYFSJ82OoQDJgBmf9GILFpvJp440vMTSZzOR19Fs5-PIFrkMCOMD_QVXJieodRVrWRblE4m-_uwgzjk1_kZFY5F-c-ElZvU8k7tcU-Kpp_lWnnpj_a_f8yIc4A21NmlP7pim9NJDLUS2ttWtIPXvAkm4if/s1600/CeeDxW74_t.jpg'; 
         const Alfina_Nindiyani  = 'https://i.scdn.co/image/ab67616d0000b273946b5d7310dc575af58ac613'; 
         const OPENING  = 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/grand-opening-design-template-3a37c804c55cf85d2ba959af479c656d_screen.jpg?ts=1575735007'; 
         const TS_MAGHRIB  = 'https://thumbs2.imgbox.com/ee/79/665Dlrr2_t.jpg'; 
         const CLOSING  = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvJpO-eAcjIJ4w2y6YQMxNpaB7FEO9Z_GqZUDsp97gEg3BtCVGePx0vX56MiTTpsnVpjm8xoUif8ifFQFYNcfcJihj-rWw-1ik3rhtU5hDJ1uyy184-w7U6Gmisnp58bcOFIeS9lxFEg7RI_VenietESGTzEgnz5TBkYH9WBvpD-aylJtfqfyqGwm93L1a/s1600/ms5QoI6.jpg'; 
-        const Alda_Risma  = 'https://i.pinimg.com/736x/dd/03/f6/dd03f6bd9ef00663800fcf5ac957967a.jpg'; 
+        const Alda_Risma  = 'https://i.scdn.co/image/ab67616d0000b2734fd8f936305cb28b2bb53ab7'; 
         const PERISTIWA_HARI_INI  = 'https://cdn.bintangtenggarafm.com/img/nTZlhHe.jpg'; 
         const Mayang_Sari  = 'https://i.scdn.co/image/ab67616d0000b2733deb71f184e845a821d500d6'; 
         const Samsons = 'https://images.genius.com/6ef0ad66be031798666d9f8e2305aca9.640x640x1.jpg'; 
         const TANDA_WAKTU_SHOLAT_ISYA = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzt-WdylfzOt4IZmb5vj6PbWsGNOGpV8YlrDTs7fejgDXPUhPI3BZ46RGlcEQGZJ9odFY0F6b9nNLHLHkXQRv8ihvehx7hIv6fz9gsclWh-gA22pMZuoVZNQvralLXFH6DLGAuAIWN400HhQkL3XmycIIopi0EZCT8TqTdhpFUYSMsFrz-jGhGOtluDwW3/s1600/uSKMZns.jpg'; 
         const Anisa_Rahman = 'https://i.scdn.co/image/ab67616d0000b273948e6ac1d0bc98d8269b9697'; 
-        const Anggun = 'https://i.scdn.co/image/ab67616d0000b273068bcbbb986ad0ee76c02f76'; 
+        const Anggun = 'https://i.scdn.co/image/ab67616d0000b273068bcbbb986ad0ee76c02f76';
         const Power_Slaves = 'https://i.scdn.co/image/ab67616d0000b2733fd1e0089d0b10e143ea976f'; 
         const Second_Civil = 'https://i.scdn.co/image/ab67616d0000b2732f75cb4fe81408c68d9e847d'; 
         const Ismi_Azis = 'https://i.scdn.co/image/ab67616d0000b273835d5ee8832686e418f78e4f'; 
+        const IKLAN = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_jT-59DMrZxG0adpN-g_aRyaQerImHeqMBjPktsug-BeevbsqQNNZY-yhmwamvEOeFw43R0-BUtdmXxrDZTsCYziDeOvKxne968l9N0ECtpvRxPVReHMHa89oewr-Ac2YBcJfKrNX09gKmOW20NOISglFsV38c44TREtSEzK1p221sY8DNtu6R0HXX7OA/s1600/500x500iklan.jpg'; 
+
+        // should put track recognition and change in DOM text
+
+        var artistRadio = info.artist.replace(/&apos;/g, '\'');
+        if (artistRadio == 'Commercial Break') {var urlCoverArt = Commercial_Break;}
+        else if (artistRadio == 'Bintang Tenggara') {var urlCoverArt = Bintang_Tenggara;}
+        else if (artistRadio == 'JINGLE SETELAH IKLAN') {var urlCoverArt = JINGLESETELAHIKLAN;}
+        else if (artistRadio == 'TS') {var urlCoverArt = TS;}
+        else if (artistRadio == 'DENGAR KAMI') {var urlCoverArt = Dengarkami;}
+        else if (artistRadio == 'JINGLE') {var urlCoverArt = JINGLE;}
+        else if (artistRadio == 'TANDA WAKTU SHOLAT DHUHUR') {var urlCoverArt = TANDAWAKTUSHOLATDHUHUR;}
+        else if (artistRadio == 'TANDA WAKTU SHOLAT ASHAR') {var urlCoverArt = ASHAR;}
+        else if (artistRadio == 'ADZAN MAGHRIB') {var urlCoverArt = ADZANMAGHRIB;}
+        else if (artistRadio == 'Opening Radio') {var urlCoverArt = OpeningRadio;}
+        else if (artistRadio == 'LAGU PENUTUP RADIO') {var urlCoverArt = LAGUPENUTUPRADIO;}
+        else if (artistRadio == 'Citizen Journalism') {var urlCoverArt = Citizen;}
+        else if (artistRadio == 'JELAJAH DESA') {var urlCoverArt = JELAJAHDESA;}
+        else if (artistRadio == 'WISATA BUDAYA') {var urlCoverArt = WISATABUDAYA;}
+        else if (artistRadio == 'SHOLAWAT THIBBIL QULUB') {var urlCoverArt = SHOLAWAT;}
+        else if (artistRadio == 'Radio Bintang Tenggara') {var urlCoverArt = RadioBintangTenggara;}
+        else if (artistRadio == 'Alffy Rev') {var urlCoverArt = AlffyRev;}
+        else if (artistRadio == 'Ajeng') {var urlCoverArt = Ajeng;}
+        else if (artistRadio == 'Agnes Monica') {var urlCoverArt = Agnes_Monica;}
+        else if (artistRadio == 'INNA Ft Yandel') {var urlCoverArt = INNA_Ft_Yandel;}
+        else if (artistRadio == 'SOLUSI SEHAT') {var urlCoverArt = SOLUSI_SEHAT;}
+        else if (artistRadio == 'Ari Lasso') {var urlCoverArt = Ari_Lasso;}
+        else if (artistRadio == 'Gracie Abrams') {var urlCoverArt = Gracie_Abrams;}
+        else if (artistRadio == 'Andmesh') {var urlCoverArt = Andmesh;}
+        else if (artistRadio == 'Dewa 19 Ft Virzha') {var urlCoverArt = Dewa_19_Ft_Virzha;}
+        else if (artistRadio == 'Dewa 19 Ft Ello') {var urlCoverArt = Dewa_19_Ft_Ello;}
+        else if (artistRadio == 'Fadly Ft Natasha') {var urlCoverArt = Fadly_Ft_Natasha;}
+        else if (artistRadio == 'T.R.I.A.D') {var urlCoverArt = TRIAD;}
+        else if (artistRadio == 'Kotak') {var urlCoverArt = Kotak;}
+        else if (artistRadio == 'Alma Esbeye') {var urlCoverArt = Alma_Esbeye;}
+        else if (artistRadio == 'TAHUKAH ANDA') {var urlCoverArt = TAHUKAH_ANDA;}
+        else if (artistRadio == 'Alfina Nindiyani') {var urlCoverArt = Alfina_Nindiyani;}
+        else if (artistRadio == 'OPENING') {var urlCoverArt = OPENING;}
+        else if (artistRadio == 'TS MAGHRIB') {var urlCoverArt = TS_MAGHRIB;}
+        else if (artistRadio == 'CLOSING') {var urlCoverArt = CLOSING;}
+        else if (artistRadio == 'Alda Risma') {var urlCoverArt = Alda_Risma;}
+        else if (artistRadio == 'PERISTIWA HARI INI') {var urlCoverArt = PERISTIWA_HARI_INI;}
+        else if (artistRadio == 'Mayang Sari') {var urlCoverArt = Mayang_Sari;}
+        else if (artistRadio == 'Samsons') {var urlCoverArt = Samsons;}
+        else if (artistRadio == 'TANDA WAKTU SHOLAT ISYA') {var urlCoverArt = TANDA_WAKTU_SHOLAT_ISYA;}
+        else if (artistRadio == 'Anisa Rahman') {var urlCoverArt = Anisa_Rahman;}
+        else if (artistRadio == 'Anggun') {var urlCoverArt = Anggun;}
+        else if (artistRadio == 'Power Slaves') {var urlCoverArt = Power_Slaves;} 
+        else if (artistRadio == 'Second Civil') {var urlCoverArt = Second_Civil;}
+        else if (artistRadio == 'Ismi Azis') {var urlCoverArt = Ismi_Azis;}
+        else if (artistRadio == 'IKLAN') {var urlCoverArt = IKLAN;}
         
-        if (artist == 'FRATELLO') {var urlCoverArt = FRATELLO;}
-            else if (artist == 'Commercial Break') {var urlCoverArt = Commercial_Break;}
-            else if (artist == 'JINGLE SETELAH IKLAN') {var urlCoverArt = JINGLESETELAHIKLAN;}
-            else if (artist == 'TS') {var urlCoverArt = TS;}
-            else if (artist == 'Bintang Tenggara') {var urlCoverArt = BintangTenggara;}
-            else if (artist == 'DENGAR KAMI') {var urlCoverArt = Dengarkami;}
-            else if (artist == 'JINGLE') {var urlCoverArt = JINGLE;}
-            else if (artist == 'TANDA WAKTU SHOLAT DHUHUR') {var urlCoverArt = TANDAWAKTUSHOLATDHUHUR;}
-            else if (artist == 'TANDA WAKTU SHOLAT ASHAR') {var urlCoverArt = ASHAR;}
-            else if (artist == 'ADZAN MAGHRIB') {var urlCoverArt = ADZANMAGHRIB;}
-            else if (artist == 'Opening Radio') {var urlCoverArt = OpeningRadio;}
-            else if (artist == 'LAGU PENUTUP RADIO') {var urlCoverArt = LAGUPENUTUPRADIO;}
-            else if (artist == 'Citizen Journalism') {var urlCoverArt = Citizen;}
-            else if (artist == 'JELAJAH DESA') {var urlCoverArt = JELAJAHDESA;}
-            else if (artist == 'WISATA BUDAYA') {var urlCoverArt = WISATABUDAYA;}
-            else if (artist == 'SHOLAWAT THIBBIL QULUB') {var urlCoverArt = SHOLAWAT;}
-            else if (artist == 'Radio Bintang Tenggara') {var urlCoverArt = RadioBintangTenggara;}
-            else if (artist == 'Alffy Rev') {var urlCoverArt = AlffyRev;}
-            else if (artist == 'Ajeng') {var urlCoverArt = Ajeng;}
-            else if (artist == 'Agnes Monica') {var urlCoverArt = Agnes_Monica;}
-            else if (artist == 'INNA Ft Yandel') {var urlCoverArt = INNA_Ft_Yandel;}
-            else if (artist == 'SOLUSI SEHAT') {var urlCoverArt = SOLUSI_SEHAT;}
-            else if (artist == 'Ari Lasso') {var urlCoverArt = Ari_Lasso;}
-            else if (artist == 'Gracie Abrams') {var urlCoverArt = Gracie_Abrams;}
-            else if (artist == 'Andmesh') {var urlCoverArt = Andmesh;}
-            else if (artist == 'Dewa 19 Ft Virzha') {var urlCoverArt = Dewa_19_Ft_Virzha;}
-            else if (artist == 'Dewa 19 Ft Ello') {var urlCoverArt = Dewa_19_Ft_Ello;}
-            else if (artist == 'Fadly Ft Natasha') {var urlCoverArt = Fadly_Ft_Natasha;}
-            else if (artist == 'T.R.I.A.D') {var urlCoverArt = TRIAD;}
-            else if (artist == 'Kotak') {var urlCoverArt = Kotak;}
-            else if (artist == 'Kirana Setio') {var urlCoverArt = Kirana_Setio;}
-            else if (artist == 'Alma Esbeye') {var urlCoverArt = Alma_Esbeye;} 
-            else if (artist == 'TAHUKAH ANDA') {var urlCoverArt = TAHUKAH_ANDA;} 
-            else if (artist == 'Alfina Nindiyani') {var urlCoverArt = Alfina_Nindiyani;} 
-            else if (artist == 'OPENING') {var urlCoverArt = OPENING;} 
-            else if (artist == 'TS MAGHRIB') {var urlCoverArt = TS_MAGHRIB;} 
-            else if (artist == 'CLOSING') {var urlCoverArt = CLOSING;} 
-            else if (artist == 'Alda Risma') {var urlCoverArt = Alda_Risma;} 
-            else if (artist == 'PERISTIWA HARI INI') {var urlCoverArt = PERISTIWA_HARI_INI;} 
-            else if (artist == 'Mayang Sari') {var urlCoverArt = Mayang_Sari;} 
-            else if (artist == 'Samsons') {var urlCoverArt = Samsons;} 
-            else if (artist == 'TANDA WAKTU SHOLAT ISYA') {var urlCoverArt = TANDA_WAKTU_SHOLAT_ISYA;} 
-            else if (artist == 'Anisa Rahman') {var urlCoverArt = Anisa_Rahman;} 
-            else if (artist == 'Anggun') {var urlCoverArt = Anggun;} 
-            else if (artist == 'Power Slaves') {var urlCoverArt = Power_Slaves;} 
-            else if (artist == 'Second Civil') {var urlCoverArt = Second_Civil;}
-            else if (artist == 'Ismi Azis') {var urlCoverArt = Ismi_Azis;}
         // Default cover art
         else {var urlCoverArt = DEFAULT_COVER_ART;}
 
