@@ -10,7 +10,7 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const RADIO_NAME = 'Bintang Tenggara';
+const RADIO_NAME = 'RBT FM';
 
 // Change Zeno Stream URL Here
 const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
