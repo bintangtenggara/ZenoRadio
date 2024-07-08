@@ -58,7 +58,7 @@ body {
     max-width: 320px;
     max-height: 320px;
     margin: auto;
-    background: url('https://live.staticflickr.com/65535/53815134475_ab557c3fdd_z.jpg') no-repeat;
+    background: url('../img/f69c7be1aa497aaa87f40d2306c4b3577.png') no-repeat;
     background-size: cover;
     border: 1px solid #ef7f1a;
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
@@ -297,7 +297,7 @@ input[type=range]::-ms-thumb {
     margin-right: 15px;
     float: left;
     border-radius: 10px;
-    background: url('https://live.staticflickr.com/65535/53815134475_ab557c3fdd_z.jpg') no-repeat;
+    background: url('../img/f69c7be1aa497aaa87f40d2306c4b3577.png') no-repeat;
     background-size: cover;
     border: 1px solid #ef7f1a;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
