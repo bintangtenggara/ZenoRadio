@@ -288,9 +288,11 @@ input[type=range]::-ms-thumb {
     background-color: none;
 }
 
-.historic .cover-historic {
-    width: 95px;
-    height: 95px;
+.historic .cover-historic { 
+    max-width: 95px;
+    max-height: 95px;
+    min-width: 70px;
+    min-height: 70px;
     margin-right: 15px;
     float: left;
     border-radius: 10px;
