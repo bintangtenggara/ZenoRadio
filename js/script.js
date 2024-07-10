@@ -262,7 +262,7 @@ function Page() {
 
     this.setVolume = function () {
         if (typeof (Storage) !== 'undefined') {
-            var volumeLocalStorage = (!localStorage.getItem('volume')) ? 80 : localStorage.getItem('volume');
+            var volumeLocalStorage = (!localStorage.getItem('volume')) ? 100 : localStorage.getItem('volume');
             document.getElementById('volume').value = volumeLocalStorage;
             document.getElementById('volIndicator').innerHTML = volumeLocalStorage;
         }
@@ -519,7 +519,6 @@ function refreshCoverForHistory(song, artist, index) {
     };
 }
  
- 
 // Function to handle event wiring
 function connectToEventSource(url) {
     // Create a new EventSource instance with the provided URL
@@ -578,7 +577,6 @@ function processData(data) {
 
 // Start connecting to the API
 connectToEventSource(url);
-
 
 // Player control by keys
 document.addEventListener('keydown', function (k) {
