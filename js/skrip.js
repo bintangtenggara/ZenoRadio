@@ -83,7 +83,7 @@ function Page() {
   this.refreshCover = function (song = '', artist) {
         const Commercial_Break = "https://live.staticflickr.com/65535/53805955404_bc1c26a8c8_z.jpg";
         const Bintang_Tenggara = 'https://live.staticflickr.com/65535/53973593802_71a71c6ea1_b.jpg';
-        const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
+        const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53972560837_ea09aaf6f2_b.jpg';
         const TS = 'https://live.staticflickr.com/65535/53806077625_4cd26b7cf5_z.jpg';
         const Dengarkami = 'https://live.staticflickr.com/65535/53972769374_6850dd307a_b.jpg';
         const JINGLE = 'https://live.staticflickr.com/65535/53809988652_4b13186277_z.jpg';
