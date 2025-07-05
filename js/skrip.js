@@ -81,12 +81,12 @@ function Page() {
     }
   }
   this.refreshCover = function (song = '', artist) {
-        const Commercial_Break = "https://live.staticflickr.com/65535/53805955404_bc1c26a8c8_z.jpg";
+        const Commercial_Break = "https://thumbs2.imgbox.com/72/80/Lx5Pfgo0_t.png";
         const Bintang_Tenggara = 'https://live.staticflickr.com/65535/53973593802_71a71c6ea1_b.jpg';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53972560837_ea09aaf6f2_b.jpg';
         const TS = 'https://live.staticflickr.com/65535/53806077625_4cd26b7cf5_z.jpg';
         const Dengarkami = 'https://live.staticflickr.com/65535/53972769374_6850dd307a_b.jpg';
-        const JINGLE = 'https://live.staticflickr.com/65535/53809988652_4b13186277_z.jpg';
+        const JINGLE = 'https://lastfm.freetls.fastly.net/i/u/ar0/a25b0e8fa1772422c6ebb3dd61316df2.png';
         const TANDAWAKTUSHOLATDHUHUR = 'https://live.staticflickr.com/65535/53815587960_2ded7e8990_z.jpg';
         const ASHAR = 'https://live.staticflickr.com/65535/53808429057_45e11e4986_z.jpg';
         const ADZANMAGHRIB = 'https://i.scdn.co/image/ab67616d0000b273f9fc89132411c52d8c6bc537';
