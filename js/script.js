@@ -13,7 +13,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 const RADIO_NAME = 'FM 95.6 MHz';
 
 // Change Stream URL Here, 
-const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
+const URL_STREAMING = 'https://asv.alhastream.com:3350/rbtfm';
 
 // You can find the mount point in the Broadcast Settings.
 // To generate the Zeno Radio API link from the mount point,
