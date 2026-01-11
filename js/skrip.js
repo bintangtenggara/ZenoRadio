@@ -81,10 +81,10 @@ function Page() {
     }
   }
   this.refreshCover = function (song = '', artist) {
-        const Commercial_Break = "https://thumbs2.imgbox.com/72/80/Lx5Pfgo0_t.png";
+        const Commercial_Break = "https://raw.githubusercontent.com/warningfm/v3/cast/img/podUnZj.png";
         const Bintang_Tenggara = 'https://live.staticflickr.com/65535/53973593802_71a71c6ea1_b.jpg';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53972560837_ea09aaf6f2_b.jpg';
-        const TS = 'https://warningfm.github.io/v3/img/HSrnise.png';
+        const TS = 'https://raw.githubusercontent.com/warningfm/v3/cast/img/vAFxMxc.png';
         const Dengarkami = 'https://live.staticflickr.com/65535/53972769374_6850dd307a_b.jpg';
         const JINGLE = 'https://lastfm.freetls.fastly.net/i/u/ar0/a25b0e8fa1772422c6ebb3dd61316df2.png';
         const TANDAWAKTUSHOLATDHUHUR = 'https://live.staticflickr.com/65535/53815587960_2ded7e8990_z.jpg';
