@@ -13,7 +13,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 const RADIO_NAME = 'FM 95.6 MHz';
 
 // Change Stream URL Here, 
-const URL_STREAMING = 'https://asv.alhastream.com:3350/rbtfm';
+const URL_STREAMING = 'https://stream.zeno.fm/kc67gypcxghtv';
 
 // You can find the mount point in the Broadcast Settings.
 // To generate the Zeno Radio API link from the mount point,
@@ -22,7 +22,7 @@ const URL_STREAMING = 'https://asv.alhastream.com:3350/rbtfm';
 // the API link will be 'https://api.zeno.fm/mounts/metadata/subscribe/yn65fsaurfhvv'.
 
 //API URL Zeno Now Playing
-const url = 'https://api.zeno.fm/mounts/metadata/subscribe/r4mpcrfwfzzuv';
+const url = 'https://api.zeno.fm/mounts/metadata/subscribe/kc67gypcxghtv';
 
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
