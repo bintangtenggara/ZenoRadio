@@ -436,7 +436,7 @@ function handleDeezerResponse(data, song) {
             else if (artist == 'Ismi Azis') {var urlCoverArt = Ismi_Azis;}
             else if (artist == 'IKLAN') {var urlCoverArt = IKLAN;}
             else if (artist == 'Station Offline') {var urlCoverArt = Station_Offline;}
-        else {var urlCoverArt = DEFAULT_COVER_ART;}
+        else {var defaultArtworkUrl = DEFAULT_COVER_ART;}
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
