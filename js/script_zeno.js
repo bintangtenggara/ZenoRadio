@@ -10,19 +10,25 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const RADIO_NAME = 'RBT FM';
+const RADIO_NAME = 'FM 95.6 MHz';
 
-// Change Zeno Stream URL Here
-const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
+// Change Stream URL Here, 
+const URL_STREAMING = 'https://stream.zeno.fm/kc67gypcxghtv';
 
-// Change API URL Here
-const url = 'https://api.zeno.fm/mounts/metadata/subscribe/r4mpcrfwfzzuv';
+// You can find the mount point in the Broadcast Settings.
+// To generate the Zeno Radio API link from the mount point,
+// exclude the '/source' part and append the remaining mount point to the base URL of the API.
+// For example, if the mount point is 'yn65fsaurfhvv/source',
+// the API link will be 'https://api.zeno.fm/mounts/metadata/subscribe/yn65fsaurfhvv'.
+
+//API URL Zeno Now Playing
+const url = 'https://api.zeno.fm/mounts/metadata/subscribe/kc67gypcxghtv';
 
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
 
-// Change DEFAULT COVER
-const DEFAULT_COVER_ART = 'https://cdn-profiles.tunein.com/s162395/images/logod.png?t=638531136760000000';
+// DEFAULT COVER
+const DEFAULT_COVER_ART = 'https://cdn4.mbahnunungonline.net/img/NoCover.png';
 
 // Variable to control history display: true = display / false = hides
 let showHistory = true; 
@@ -80,12 +86,14 @@ class Page {
 
         // Function to update the cover
         this.refreshCover = function (song = '', artist) {
-            
+           
+
             // Creation of the script tag to make the JSONP request to the Deezer API
             const script = document.createElement('script');
             script.src = `https://api.deezer.com/search?q=${artist} ${song}&output=jsonp&callback=handleDeezerResponse`;
             document.body.appendChild(script);
         };
+
 
         this.changeVolumeIndicator = function (volume) {
             document.getElementById('volIndicator').innerHTML = volume;
@@ -252,19 +260,19 @@ function mute() {
 
 // Function to handle event wiring
 function connectToEventSource(url) {
-    // Criar uma nova instÃ¢ncia de EventSource com a URL fornecida
+    // Create a new EventSource instance with the provided URL
     const eventSource = new EventSource(url);
 
     // Add a listener for the 'message' event
     eventSource.addEventListener('message', function(event) {
-        // Chamar a funÃ§Ã£o para tratar os dados recebidos, passando a URL tambÃ©m
+        // Call the function to process the received data, passing the URL as well
         processData(event.data, url);
     });
 
     // Add a listener for the 'error' event
     eventSource.addEventListener('error', function(event) {
-        console.error('Erro na conexÃ£o de eventos:', event);
-        // Tentar reconectar apÃ³s um intervalo de tempo
+        console.error('Erro na conexão de eventos:', event);
+        // Try to reconnect after a time interval
         setTimeout(function() {
             connectToEventSource(url);
         }, 1000);
@@ -326,9 +334,8 @@ function handleDeezerResponse(data, song) {
         coverBackground.style.backgroundImage = 'url(' + artworkUrl + ')';
     } else {
         // If there is no data or the data list is empty,
-        // set the Default cover art
+        // set default cover
         var defaultArtworkUrl = DEFAULT_COVER_ART;
-        
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
@@ -379,7 +386,7 @@ function handleDeezerResponse(data, song) {
 
 function getStreamingData(data) {
 
-    console.log("ConteÃºdo dos dados recebidos:", data);
+    console.log("Conteúdo dos dados recebidos:", data);
     // Parse JSON
     var jsonData = JSON.parse(data);
 
@@ -389,7 +396,7 @@ function getStreamingData(data) {
     let song = jsonData.currentSong.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
     let artist = jsonData.currentArtist.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
 
-    // Change the title
+    // Change title
     document.title = artist + ' - ' + song + ' | ' + RADIO_NAME;
 
     page.refreshCover(song, artist);
@@ -398,7 +405,7 @@ function getStreamingData(data) {
 
     if (showHistory) {
 
-        // Check if the song is different from the last updated one
+        // Check if the music is different from the last updated one
         if (musicHistory.length === 0 || (musicHistory[0].song !== song)) {
             // Update history with new song
             updateMusicHistory(artist, song);
@@ -424,12 +431,14 @@ var musicHistory = [];
 
 // Function to update the history of the last two songs
 function updateMusicHistory(artist, song) {
-    // Add new song to top of history
+    // Add new song to beginning of history
     musicHistory.unshift({ artist: artist, song: song });
+    // Default cover art
+    var defaultArtworkUrl = DEFAULT_COVER_ART;
 
-    // Keep only the last two songs in history
+    // Keep only the last two songs in the history
     if (musicHistory.length > 4) {
-        musicHistory.pop(); // Removes the oldest song from history
+        musicHistory.pop(); // Remove oldest song from history
     }
 
     // Call the function to display the updated history
@@ -440,17 +449,14 @@ function updateMusicHistory(artist, song) {
 function displayHistory() {
     var $historicDiv = document.querySelectorAll('#historicSong article');
     var $songName = document.querySelectorAll('#historicSong article .music-info .song');
-    var $artistName = document.querySelectorAll('#historicSong article .music-info .artist'); 
+    var $artistName = document.querySelectorAll('#historicSong article .music-info .artist');
 
-    // Default cover art
-    var urlCoverArt = 'img/cover.png';
-
-    // Display the last two songs in history, starting from index 1 to delete the current song
+    // Display the last two songs in the history, starting from index 1 to delete the current song
     for (var i = 1; i < musicHistory.length && i < 3; i++) {
         $songName[i - 1].innerHTML = musicHistory[i].song;
         $artistName[i - 1].innerHTML = musicHistory[i].artist;
 
-        // Call the function to search for the song cover in the Deezer API
+        // Call the function to fetch the song cover in the Deezer API
         refreshCoverForHistory(musicHistory[i].song, musicHistory[i].artist, i - 1);
 
         // Add class for animation
@@ -487,6 +493,7 @@ function refreshCoverForHistory(song, artist, index) {
         }
     };
 }
+
 
 document.addEventListener('keydown', function (event) {
     var key = event.key;
