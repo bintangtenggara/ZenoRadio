@@ -335,7 +335,7 @@ function handleDeezerResponse(data, song) {
     } else {
         // If there is no data or the data list is empty,
         // set default cover
-        var defaultArtworkUrl = DEFAULT_COVER_ART;
+        
         const Commercial_Break = 'https://warningfm.github.io/v3/img/podUnZj.png';
         const Bintang_Tenggara = 'https://raw.githubusercontent.com/bintangtenggara/v3/master/img/Ttr3OE0.png';
         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
@@ -387,9 +387,9 @@ function handleDeezerResponse(data, song) {
         const IKLAN = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3kvdmC7dAKO4NEBIHYqzIVCpCUjPipqTOwGJ-PZceBRYHQIhRI61imk6t2QXqJBBRsI4MYazWX1ecCGLery0jUwK9fkPpv7YQHKvE1W4OzRqHpal3VMsAvwl1pwYx28_-wP1KS9nq2EaR2E2qv3hw0k_mbfo9FagXNwhYNaOmZGRreSQwn2XsZ4FCyiw_/s1600/1200x1200iklan.jpg';
         const Station_Offline = 'https://cdn.bintangtenggarafm.com/img/offline.jpg'; 
 
-        if (artist == 'Commercial Break') {var urlCoverArt = Commercial_Break;}
-            else if (artist == 'Bintang Tenggara') {var urlCoverArt = Bintang_Tenggara;}
-            else if (artist == 'JINGLE SETELAH IKLAN') {var urlCoverArt = JINGLESETELAHIKLAN;}
+        if (song == 'Commercial Break') {var urlCoverArt = Commercial_Break;}
+            else if (song == 'Bintang Tenggara') {var urlCoverArt = Bintang_Tenggara;}
+            else if (song == 'JINGLE SETELAH IKLAN') {var urlCoverArt = JINGLESETELAHIKLAN;}
             else if (artist == 'TS') {var urlCoverArt = TS;}
             else if (artist == 'DENGAR KAMI') {var urlCoverArt = Dengarkami;}
             else if (artist == 'JINGLE') {var urlCoverArt = JINGLE;}
