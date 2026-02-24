@@ -346,7 +346,7 @@ function handleDeezerResponse(data, song) {
             else if (artist == 'JINGLE SETELAH IKLAN') {var artworkUrl = JINGLESETELAHIKLAN;}
             else if (artist == 'TS') {var urlCoverArt = TS;}
             else if (artist == 'DENGAR KAMI') {var artworkUrl = Dengarkami;}
-         else {var urlCoverArt = DEFAULT_COVER_ART;}
+         else {ar defaultArtworkUrl = DEFAULT_COVER_ART;}
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
