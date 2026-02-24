@@ -335,7 +335,18 @@ function handleDeezerResponse(data, song) {
     } else {
         // If there is no data or the data list is empty,
         // set default cover
-        var defaultArtworkUrl = DEFAULT_COVER_ART;
+        //var defaultArtworkUrl = DEFAULT_COVER_ART;
+         const Commercial_Break = 'https://warningfm.github.io/v3/img/podUnZj.png';
+         const Bintang_Tenggara = 'https://raw.githubusercontent.com/bintangtenggara/v3/master/img/Ttr3OE0.png';
+         const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
+         const TS = 'https://warningfm.github.io/v3/img/vAFxMxc.png';
+         const Dengarkami = 'https://live.staticflickr.com/65535/53972769374_6850dd307a_b.jpg';
+          if (artist == 'Commercial Break') {var artworkUrl = Commercial_Break;}
+            else if (artist == 'Bintang Tenggara') {var artworkUrl = Bintang_Tenggara;}
+            else if (artist == 'JINGLE SETELAH IKLAN') {var artworkUrl = JINGLESETELAHIKLAN;}
+            else if (artist == 'TS') {var urlCoverArt = TS;}
+            else if (artist == 'DENGAR KAMI') {var artworkUrl = Dengarkami;}
+         else {var urlCoverArt = DEFAULT_COVER_ART;}
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
         coverBackground.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
