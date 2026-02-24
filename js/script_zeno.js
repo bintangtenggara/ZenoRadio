@@ -341,11 +341,11 @@ function handleDeezerResponse(data, song) {
          const JINGLESETELAHIKLAN = 'https://live.staticflickr.com/65535/53804698952_be7cefe6cd_z.jpg';
          const TS = 'https://warningfm.github.io/v3/img/vAFxMxc.png';
          const Dengarkami = 'https://live.staticflickr.com/65535/53972769374_6850dd307a_b.jpg';
-          if (song == 'Commercial Break') {var artworkUrl = Commercial_Break;}
-            else if (song == 'Bintang Tenggara') {var artworkUrl = Bintang_Tenggara;}
-            else if (song == 'JINGLE SETELAH IKLAN') {var artworkUrl = JINGLESETELAHIKLAN;}
-            else if (song == 'TS') {var urlCoverArt = TS;}
-            else if (song == 'DENGAR KAMI') {var artworkUrl = Dengarkami;}
+          if (song == 'Commercial Break') {var defaultArtworkUrl = Commercial_Break;}
+            else if (song == 'Bintang Tenggara') {var defaultArtworkUrl = Bintang_Tenggara;}
+            else if (song == 'JINGLE SETELAH IKLAN') {var defaultArtworkUrl = JINGLESETELAHIKLAN;}
+            else if (song == 'TS') {var defaultArtworkUrl = TS;}
+            else if (song == 'DENGAR KAMI') {var defaultArtworkUrl = Dengarkami;}
          else {var defaultArtworkUrl = DEFAULT_COVER_ART;}
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
