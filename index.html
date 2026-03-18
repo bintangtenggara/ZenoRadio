@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="stylesheet" type="text/css" href="https://warningfm.github.io/v3/css/animate.css">
 <link rel="stylesheet" href="css/style.css">
-
+<link rel="manifest" href="/manifest.json">
 <style>
         /* For Desktop */
         .desktop-story {
@@ -142,6 +142,18 @@
     <script type="text/javascript" src="https://unpkg.com/popper.js@1.12.3/dist/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+     <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+              .then(function(registration) {
+                console.log('Service Worker registrado com sucesso:', registration);
+              }, function(err) {
+                console.log('Falha ao registrar o Service Worker:', err);
+              });
+          });
+        }
+      </script>	   
     <small style="bottom: 8px;font-size: 8px;position: fixed;right: 8px;text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);z-index: 1004;"><b><a style="color:#fff;text-decoration: none;" target="_blank" href="https://mbahnunungonline.net/live" title="Internet Radio Streaming">NNG.NET</a></b></small>
 </body>
 </html>
