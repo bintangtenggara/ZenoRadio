@@ -31,7 +31,7 @@ const API_KEY = "18fe07917957c289983464588aabddfb";
 const DEFAULT_COVER_ART = 'https://cdn.bintangtenggarafm.com/img/rbtfm-640.png';
 
 // Variable to control history display: true = display / false = hides
-let showHistory = true; 
+let showHistory = false; 
 
 window.onload = function () {
     var page = new Page;
